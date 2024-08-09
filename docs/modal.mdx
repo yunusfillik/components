@@ -1,0 +1,52 @@
+---
+sidebar_position: 13
+title: Modal
+sidebar_label: Modal
+authors: [onur]
+---
+
+import Authors from '@theme/authors'
+import MDXContentProvider from '@theme/mdxcontentprovider'
+
+# Modal
+
+<Authors frontMatter={frontMatter} />
+
+
+A modal that follows ParamTech Design System.
+
+```jsx live
+function Sample () {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const showModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleOk = () => {
+    setIsModalOpen(false)
+  }
+
+  const handleCancel = () => {
+    setIsModalOpen(false)
+  }
+
+  return (
+    <ThemeProvider product="param">
+      <Button type="primary" onClick={showModal}>
+        Show Modal
+      </Button>
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Sample modal</p>
+      </Modal>
+    </ThemeProvider>
+  )
+}
+```
+
+

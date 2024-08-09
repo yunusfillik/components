@@ -1,0 +1,39 @@
+/**
+ * Copyright © 2024 ParamTech Inc. All rights reserved.
+ *
+ * See License for license information.
+ */
+
+.pt__content {
+  /** padding-block: 50px; */
+  /** padding-inline: 50px; */
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  position: relative;
+  overscroll-behavior: none !important;
+  min-height: 0;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.pt__content_container {
+  max-width: 1320px;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.pt__content_body {
+  max-width: 1320px;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+.param-layout-content {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,111 @@
+---
+sidebar_position: 5
+sidebar_label: Button
+authors: [onur]
+---
+
+import Authors from '@theme/authors'
+
+# Button
+
+<Authors frontMatter={frontMatter} />
+
+### Variants
+
+:::tip
+**Primary**: The primary button highlights the most common action users will take on the page (only one per page).
+
+**Default**: Default buttons are the standard button type for most secondary actions on the page.
+
+**Link**: Link buttons are equivalent to tertiary actions.
+
+:::
+
+```jsx live
+<ThemeProvider product="param">
+  <Space>
+    <Button type="primary">Primary</Button>
+    <Button type="default">Default</Button>
+    <Button type="link">Link</Button>
+    <Button type="dashed">Dashed</Button>
+    <Button type="ghost">Ghost</Button>
+  </Space>
+</ThemeProvider>
+```
+
+### Loader
+
+```jsx live
+<ThemeProvider product="finrota">
+  <Space>
+    <Button type="primary" loading={true}>Loading</Button>
+    <Button type="default" loading={true}>In Progress</Button>
+    <Button type="ghost" loading={true}>Submit</Button>
+  </Space>
+</ThemeProvider>
+```
+### Sizes
+
+```jsx live
+<ThemeProvider product="kredim">
+  <Space>
+    <Button type="default" size="small">Small</Button>
+    <Button type="primary" size="default">Default</Button>
+    <Button type="primary" size="large">Large</Button>
+  </Space>
+</ThemeProvider>
+```
+
+### Icon
+
+```jsx live
+<ThemeProvider product="business">
+  <Space>
+    <Button type="default" size="small" icon={<SearchOutlined />}>Small</Button>
+  </Space>
+</ThemeProvider>
+```
+
+##### General Writing Guidelines
+
+:::info
+
+- Use sentence case, but capitalize proper nouns and brand names correctly in context.
+- Use end punctuation, except in headers and buttons. Avoid exclamation points.
+- Use present-tense verbs and active voice.
+- Don't use "please," "thank you," ellipses (...), ampersand (&), e.g., i.e., or etc. in writing.
+- Avoid directional language. For example: use "previous" not "above," use "following" not "below."
+- Use device-independent language. For example: use "choose" or "interact" not "click."
+:::
+
+### Component Specific Guidelines
+
+:::info
+- Use one or two words for the label. Use additional words only when you must add clarity:
+- An action verb
+  - For example: `Start` `Continue` `Open` `Create`
+- An action verb plus a proper noun, including brand names (use proper nouns sparingly and only when they provide additional clarity)
+  - For example: Launch EC2 instance
+- An action verb plus a feature or resource name
+  - For example: Create identity source, Create permission set
+- When additional clarity is required, be concise. Try to use a section header, page title, or other content to provide context so that the button does not need additional words.
+  - For example: View dashboard if there’s only one dashboard on the page, instead of View Storage Lens dashboard because the page already describes Storage Lens.
+- Don’t include Yes for buttons that confirm an action.
+  - For example: In a modal that prompts users to confirm a system reboot, use this label: Reboot
+- Don’t use terminal punctuation (period, exclamation point, question mark, colon) for button labels.
+- Don’t use articles (a, an, the) in button labels.
+  - For example: Migrate server instead of Migrate a server
+:::
+
+### API
+
+#### Properties
+
+| Property |           Description            |  Type   | Default |
+| :------: | :---------------------------------------------------------------------------------------------------- | :-----: | :-----: |
+| id  | Unique identifier for the button. | string |  -  |
+| animated  | Determines if the button should display an animation effect. | boolean |  false  |
+| testID  | Unique identifier for testing the button.  | string |  -  |
+| loadingText  | Text to display when the button is in a loading state. | string |  -  |
+| iconName  | Name of the icon to display within the button | string |  -  |
+| iconPosition  | Specifies the position of the icon within the button. | ButtonIconPosition |  start  |
